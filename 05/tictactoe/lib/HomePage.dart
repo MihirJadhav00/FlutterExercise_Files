@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -92,6 +94,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[1] == gameState[2])) {
       setState(() {
         this.message = '${this.gameState[0]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
 
@@ -101,6 +106,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[4] == gameState[5])) {
       setState(() {
         this.message = '${this.gameState[3]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
 
@@ -110,6 +118,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[7] == gameState[8])) {
       setState(() {
         this.message = '${this.gameState[6]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
     //Win Condition for 1st Column
@@ -119,6 +130,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[3] == gameState[6])) {
       setState(() {
         this.message = '${this.gameState[0]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
     //Win Condition for 2nd Column
@@ -128,6 +142,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[4] == gameState[7])) {
       setState(() {
         this.message = '${this.gameState[1]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
     //Win Condition for 3rd Column
@@ -137,6 +154,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[5] == gameState[8])) {
       setState(() {
         this.message = '${this.gameState[2]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
     //Win Condition for 1st Diag..
@@ -146,6 +166,9 @@ class _HomePageState extends State<HomePage> {
         (gameState[4] == gameState[8])) {
       setState(() {
         this.message = '${this.gameState[2]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
     //Win Condition for 2st Diag..
@@ -155,12 +178,18 @@ class _HomePageState extends State<HomePage> {
         (gameState[4] == gameState[6])) {
       setState(() {
         this.message = '${this.gameState[2]} Wins';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
     //Condition for draw
     else if (!gameState.contains('empty')) {
       setState(() {
         this.message = 'Game Draw';
+        Timer(Duration(seconds: 3), () {
+          this.resetGame();
+        });
       });
     }
   }
