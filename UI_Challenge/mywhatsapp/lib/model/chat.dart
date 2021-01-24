@@ -9,8 +9,8 @@ class chat {
 
 List<chat> messageData = [
   new chat(
-      name: "Hitesh Choudhary",
-      message: "Learn Code Online",
+      name: "Mihir Jadhav",
+      message: "I am an Engineering.",
       time: "10:12",
       imageUrl:
           "https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"),
