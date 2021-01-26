@@ -6,3 +6,10 @@ void main() => runApp(Center(
         textDirection: TextDirection.ltr,
       ),
     ));
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
